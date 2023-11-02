@@ -1,29 +1,31 @@
-import { useCallback, useEffect } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { Main } from 'src/components/Main'
 
 
 
 export default function Home() {
-  // const foo = 1;
+  const [foo, setFoo] = useState(1);
 
-  // const handleClck = useCallback((e) => {
-  //   console.log(e.target.href);
-  //   e.preventDefault();
-  //   alert(foo)
-  // }, []);
+  const handleClck = (e) => {
+    //前の状態を用いて数字を変化させたい場合は、setFooの中に関数を書く
+    setFoo(foo => foo + 1);
+    setFoo(foo => foo + 1)
+
+  };
 
   useEffect(() => {
-    console.log("マウント時");
+    // console.log("マウント時");
     document.body.style.backgroundColor = "lightblue";
 
     return () => {
-      console.log("アンマウント時");
+      // console.log("アンマウント時");
       document.body.style.backgroundColor = "";
     }
   }, [])
   return (
     <>
-      {/* <a href='/about' onClick={handleClck}>ボタン</a > */}
+      <h1>{foo}</h1>
+      <button href='/about' onClick={handleClck}>ボタン</button >
       <Main page="index" />
     </>
   )
