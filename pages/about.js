@@ -3,8 +3,8 @@ import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
 import { Links } from '@/components/Links'
-import Headline from '@/components/Headline'
-import Header from '@/components/Header'
+import { Headline } from '@/components/Headline'
+import { Header } from '@/components/Header'
 
 const inter = Inter({ subsets: ['latin'] })
 

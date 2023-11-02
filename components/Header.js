@@ -1,6 +1,6 @@
 import Head from 'next/head'
 
-export default function Header(props) {
+export function Header(props) {
     console.log(props.title)
     return (
         <Head>
