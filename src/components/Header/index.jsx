@@ -1,12 +1,13 @@
-import Head from 'next/head'
 import Link from 'next/link'
+import Head from 'next/head';
 import styles from './Header.module.css';
+
 
 export function Header(props) {
     return (
         <div>
             <Head>
-                <title>{props.title} page</title>
+                <title>{props.t} page</title>
             </Head>
             <header className={styles.header}>
                 <Link href='/'>
