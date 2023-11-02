@@ -4,10 +4,12 @@ import { Headline } from '@/src/components/Headline'
 // import { Header } from '@/src/components/Header'
 import { Links } from 'src/components/Links'
 import { Header } from 'src/components/Header'
+import { useEffect } from 'react'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export function Main(props) {
+    
     return (
         <>
             <Header t={props.page} />
