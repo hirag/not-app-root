@@ -11,14 +11,13 @@ export default function Home() {
 
   const handleClck = useCallback(() => {
     //前の状態を用いて数字を変化させたい場合は、setFooの中に関数を書く
-    console.log(foo);
     if (foo < 10) {
-      setFoo(foo => foo + 1);
+      setFoo(prevFoo => prevFoo + 1);
     }
   }, [foo]);
 
   const handleDisplay = useCallback(() => {
-    setIsShow((isShow) => !isShow);
+    setIsShow((prevIsShow) => !prevIsShow);
   }, []);
 
   useEffect(() => {
