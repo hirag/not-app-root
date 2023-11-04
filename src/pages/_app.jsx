@@ -1,11 +1,11 @@
 import '@/src/styles/globals.css'
 import { useCounter } from 'src/hooks/useCounter'
 import { useInputArray } from '../hooks/useInputArray';
-import { useBgLightBlue } from '../hooks/useBgLightBlue';
+import { useBgCol } from '../hooks/useBgCol';
 
 export default function App({ Component, pageProps }) {
   const counter = useCounter();
   const inputArray = useInputArray();
-  useBgLightBlue();
+  useBgCol();
   return <Component {...pageProps} {...counter} {...inputArray} />
 }
