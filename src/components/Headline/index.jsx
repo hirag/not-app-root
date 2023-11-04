@@ -4,8 +4,8 @@ export function Headline(props) {
     return (
         <div>
             <p>
-                Get started by editing&nbsp;
-                <code className={styles.code}>{props.code}.js</code>
+                アイテムの数は&nbsp;
+                <code className={styles.code}>{props.code}個です。</code>
             </p>
         </div>
     );
