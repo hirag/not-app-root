@@ -1,9 +1,13 @@
-import { useCallback, useState } from 'react';
+import { useCallback, useMemo, useState } from 'react';
 
 export const useCounter = () => {
 
     const [foo, setFoo] = useState(1);
     const [isShow, setIsShow] = useState(true);
+
+    const doubleFoo = useMemo(() => {
+        return foo * 2;
+    }, [foo]);
 
     const handleClick = useCallback(() => {
         //前の状態を用いて数字を変化させたい場合は、setFooの中に関数を書く
@@ -16,5 +20,5 @@ export const useCounter = () => {
         setIsShow((prevIsShow) => !prevIsShow);
     }, []);
 
-    return { foo, isShow, handleClick, handleDisplay };
+    return { foo, doubleFoo, isShow, handleClick, handleDisplay };
 }

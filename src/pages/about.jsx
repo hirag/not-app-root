@@ -1,10 +1,10 @@
 import { Main } from "src/components/Main";
 
 
-export default function About({ foo, isShow, handleClick, handleDisplay, text, array, handleAdd }) {
+export default function About({ doubleFoo, isShow, handleClick, handleDisplay, text, array, handleAdd }) {
     return (
         <>
-            {isShow ? <h1>{foo}</h1> : null}
+            {isShow ? <h1>{doubleFoo}</h1> : null}
             <input type="text" value={text} onChange={e => {
                 if (text.length >= 5) { return; }
                 setText(e.target.value);
